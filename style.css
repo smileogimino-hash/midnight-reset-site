@@ -414,7 +414,61 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* =========================
+   MESSAGE
+========================= */
 
+.message {
+  width: 100%;
+
+  /* footer 32px を除いた残りを使用 */
+  min-height: calc(100vh - 32px);
+
+  background: #12223c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 24px;
+}
+
+.message__inner {
+  width: 100%;
+}
+
+.message__inner p {
+  color: #ffffff;
+
+  text-align: right;
+
+  font-size: 16px;
+  line-height: 2;
+
+  letter-spacing: 0.04em;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  width: 100%;
+  height: 32px;
+
+  background: #0b1627;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  color: #ffffff;
+
+  font-size: 12px;
+  line-height: 1;
+}
 /* =========================
    FLOAT ANIMATION
 ========================= */
