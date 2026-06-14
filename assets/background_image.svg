@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #01223c;
+      }
+    </style>
+    <image id="image" width="393" height="2515" xlink:href="../../../../Downloads/star_group.png"/>
+  </defs>
+  <g>
+    <rect class="cls-1" x=".5" y=".5" width="1919" height="1079"/>
+    <path d="M1919,1v1078H1V1h1918M1920,0H0v1080h1920V0h0Z"/>
+  </g>
+  <use transform="translate(1920.0004 .0004) rotate(90) scale(.8513)" xlink:href="#image"/>
+  <use transform="translate(-7.77 687.18) rotate(-90) scale(.9)" xlink:href="#image"/>
+  <use transform="translate(-322.4848 1134.4548) rotate(-90) scale(1.0654)" xlink:href="#image"/>
+</svg>

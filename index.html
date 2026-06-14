@@ -8,61 +8,87 @@
   </head>
 
   <body>
-    <section class="hero">
-      <!-- 雲 -->
-      <div class="hero__cloud cloud-left-top">
-        <img src="cloud.svg" alt="" />
-      </div>
+    <main class="page">
+      <section class="hero">
+        <!-- 雲 -->
+        <div class="hero__cloud cloud-left-top">
+          <img src="cloud.svg" alt="" />
+        </div>
 
-      <div class="hero__cloud cloud-right-top">
-        <img src="cloud.svg" alt="" />
-      </div>
+        <div class="hero__cloud cloud-right-top">
+          <img src="cloud.svg" alt="" />
+        </div>
 
-      <div class="hero__cloud cloud-left-middle">
-        <img src="cloud.svg" alt="" />
-      </div>
+        <div class="hero__cloud cloud-left-middle">
+          <img src="cloud.svg" alt="" />
+        </div>
 
-      <div class="hero__cloud cloud-right-middle">
-        <img src="cloud.svg" alt="" />
-      </div>
+        <div class="hero__cloud cloud-right-middle">
+          <img src="cloud.svg" alt="" />
+        </div>
 
-      <div class="hero__cloud cloud-left-bottom">
-        <img src="cloud.svg" alt="" />
-      </div>
+        <div class="hero__cloud cloud-left-bottom">
+          <img src="cloud.svg" alt="" />
+        </div>
 
-      <div class="hero__cloud cloud-right-bottom">
-        <img src="cloud.svg" alt="" />
-      </div>
+        <div class="hero__cloud cloud-right-bottom">
+          <img src="cloud.svg" alt="" />
+        </div>
 
-      <!-- 人物 -->
-      <img
-        src="sleeping_down.svg"
-        alt=""
-        class="hero__character hero__character--top"
-      />
+        <!-- 人物 -->
+        <img
+          src="sleeping_down.svg"
+          alt=""
+          class="hero__character hero__character--top"
+        />
 
-      <img
-        src="sleeping_up.svg"
-        alt=""
-        class="hero__character hero__character--bottom"
-      />
+        <img
+          src="sleeping_up.svg"
+          alt=""
+          class="hero__character hero__character--bottom"
+        />
 
-      <!-- メッセージ -->
-      <div class="hero__message">
-        <p>
-          休みたいのに、休めてない。<br />
-          これってどういうことなんだろう。
-        </p>
-      </div>
-    </section>
+        <!-- メッセージ -->
+        <div class="hero__message">
+          <p>
+            休みたいのに、休めてない。<br />
+            これってどういうことなんだろう。
+          </p>
+        </div>
+      </section>
 
-    <section class="question"></section>
+      <section class="question">
+        <div class="decoration">
+          <img src="img/cloud.png" alt="" class="cloud cloud-left" />
+          <img src="img/cloud.png" alt="" class="cloud cloud-right" />
+        </div>
 
-    <section class="answer"></section>
+        <div class="question-inner">
+          <p class="question-text">今のあなたの状態に近いものはどれですか</p>
 
-    <section class="message"></section>
+          <div class="choice-area">
+            <div class="option">
+              <button class="button-option">
+                01. ついスマホの画面を見続けてしまう
+              </button>
+            </div>
 
-    <footer></footer>
+            <div class="option">
+              <button class="button-option">02. 動くのが面倒</button>
+            </div>
+
+            <div class="option">
+              <button class="button-option">03. 体力も気力も限界</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="answer"></section>
+
+      <section class="message"></section>
+
+      <footer></footer>
+    </main>
   </body>
   <script src="main.js"></script>
 </html>
