@@ -8,8 +8,6 @@
   min-height: 100vh;
 
   margin: 0 auto;
-
-  background: #5c7fb9;
 }
 
 * {
@@ -19,9 +17,13 @@
 }
 
 body {
-  background: #5c7fb9;
   min-height: 100vh;
   font-family: "BIZ UDPGothic", sans-serif;
+}
+
+.hero,
+.question {
+  background: #5c7fb9;
 }
 
 /* =========================
@@ -87,15 +89,14 @@ body {
 }
 
 /* =========================
-   CLOUD
+   CLOUD02
 ========================= */
-
-.hero__cloud {
+.question__cloud {
   position: absolute;
   z-index: 1;
 }
 
-.hero__cloud img {
+.question__cloud img {
   display: block;
   width: 120px;
 }
@@ -127,6 +128,13 @@ body {
   animation: cloudFloatLeft 20s ease-in-out infinite;
 }
 
+.question {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  border: 3px solid red; /* 確認用 */
+}
 /* =====================
    コンテンツ
 ===================== */
@@ -143,6 +151,10 @@ body {
 /* =====================
    質問文
 ===================== */
+
+.question {
+  border: 3px solid red;
+}
 
 .question-text {
   text-align: left;
@@ -187,32 +199,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* =====================
-   雲
-===================== */
-
-.decoration {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.cloud {
-  position: absolute;
-  width: 140px;
-}
-
-.cloud-left {
-  top: 80px;
-  left: -30px;
-}
-
-.cloud-right {
-  top: 280px;
-  right: -20px;
-}
-
 /* =========================
    ANSWER
 ========================= */
@@ -224,6 +210,17 @@ body {
   overflow: hidden;
 
   padding: 120px 0;
+
+  border: 3px solid rgb(242, 0, 255);
+
+  background: linear-gradient(
+    180deg,
+    #5c7fb9 0%,
+    #466393 4.81%,
+    #314870 15.38%,
+    #223657 30.77%,
+    #12223c 57.17%
+  );
 }
 
 .answer__bg {
@@ -248,6 +245,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 180px;
+
+  border: 3px solid rgb(0, 255, 38);
 }
 
 .answer-block {
@@ -258,6 +257,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border: 3px solid rgb(255, 0, 0);
 }
 
 .answer-block__decoration {
@@ -284,7 +285,7 @@ body {
 
   transform: translate(-50%, -50%);
 
-  z-index: 2;
+  z-index: 5;
 }
 
 .suggestion {
@@ -485,11 +486,14 @@ body {
 
 @media (min-width: 768px) {
   body {
-    background-image: url("assets/background_image.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(
+      180deg,
+      #5c7fb9 0%,
+      #466393 20%,
+      #314870 40%,
+      #223657 65%,
+      #12223c 100%
+    );
 
     display: flex;
     justify-content: center;
