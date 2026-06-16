@@ -343,6 +343,8 @@ body {
 
   transform: translate(-50%, -50%);
 
+  animation: answerFloat 6s ease-in-out infinite;
+
   z-index: 4;
 }
 
@@ -350,6 +352,8 @@ body {
 
 .answer01 .answer-block__character {
   width: 300px;
+
+  animation: answerFloatRotate 12s ease-in-out infinite;
 }
 
 /* 02 */
@@ -576,6 +580,41 @@ body {
   }
 }
 
+@keyframes answerFloat {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateY(-4px);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+@keyframes answerFloatRotate {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-50%, -50%) translateY(-2px) rotate(4deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateY(-4px) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(-50%, -50%) translateY(-2px) rotate(-4deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+  }
+}
 /* =========================
    PC表示
 ========================= */
