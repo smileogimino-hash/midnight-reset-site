@@ -38,3 +38,11 @@ darkSwitch.addEventListener("change", () => {
     document.body.classList.remove("is-dark");
   }
 });
+
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    screenDark.classList.add("is-active");
+  } else {
+    screenDark.classList.remove("is-active");
+  }
+});
