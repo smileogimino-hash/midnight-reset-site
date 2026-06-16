@@ -39,6 +39,172 @@ body {
 }
 
 /* =========================
+   MODAL
+========================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.4s;
+
+  z-index: 9999;
+}
+
+.modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(18, 34, 60, 0.72);
+
+  backdrop-filter: blur(6px);
+}
+
+.modal__content {
+  position: relative;
+
+  width: calc(100% - 48px);
+  max-width: 320px;
+  min-height: 420px;
+
+  background: #394c6ba6;
+
+  backdrop-filter: blur(12px);
+
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 32px;
+
+  border-radius: 24px;
+}
+
+.modal__inner {
+  text-align: center;
+}
+
+.modal__title {
+  color: #fff;
+
+  font-size: 2rem;
+  font-weight: 400;
+
+  margin-bottom: 32px;
+}
+
+.modal__text {
+  color: #fff;
+
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.modal__close {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.modal__close img {
+  width: 28px;
+  height: auto;
+}
+
+/* =========================
+   SWITCH
+========================= */
+
+.modal-switch {
+  position: relative;
+
+  display: inline-block;
+
+  width: 96px;
+  height: 52px;
+
+  margin-top: 40px;
+}
+
+.modal-switch input {
+  display: none;
+}
+
+.modal-switch__slider {
+  position: absolute;
+  inset: 0;
+
+  background: #d9d9d9;
+
+  border-radius: 999px;
+
+  transition: 0.3s;
+}
+
+.modal-switch__slider::before {
+  content: "";
+
+  position: absolute;
+
+  width: 40px;
+  height: 40px;
+
+  left: 6px;
+  top: 6px;
+
+  border-radius: 50%;
+
+  background: #12223c;
+
+  transition: 0.3s;
+}
+
+.modal-switch input:checked + .modal-switch__slider {
+  background: #0b1627;
+}
+
+.modal-switch input:checked + .modal-switch__slider::before {
+  transform: translateX(44px);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.is-dark::after {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0);
+
+  z-index: 9998;
+
+  pointer-events: none;
+}
+
+/* =========================
    HERO
 ========================= */
 

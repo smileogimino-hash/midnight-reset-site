@@ -13,6 +13,33 @@
     />
   </head>
 
+  <div class="modal" id="modal">
+    <div class="modal__overlay"></div>
+
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose">
+        <img src="assets/close_button.svg" alt="閉じる" />
+      </button>
+
+      <div class="modal__inner">
+        <h3 class="modal__title">水を一口</h3>
+
+        <p class="modal__text">
+          あなたは水にはいくつ<br />
+          氷を入れますか。<br />
+          <br />
+          冷たい水が喉を通る感覚を<br />
+          感じてみませんか。
+        </p>
+
+        <label class="modal-switch">
+          <input type="checkbox" id="darkSwitch" />
+          <span class="modal-switch__slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
   <body>
     <main class="page">
       <section class="hero">
