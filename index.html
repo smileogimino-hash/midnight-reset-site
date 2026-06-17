@@ -13,32 +13,36 @@
     />
   </head>
 
-  <div class="modal" id="modal">
-    <div class="modal__overlay"></div>
+  <body>
+    <div class="modal" id="modal">
+      <div class="modal__overlay"></div>
 
-    <div class="modal__content">
-      <button class="modal__close" id="modalClose">
-        <img src="assets/close_button.svg" alt="閉じる" />
-      </button>
+      <div class="modal__content">
+        <button class="modal__close" id="modalClose">
+          <img src="assets/close_button.svg" alt="閉じる" />
+        </button>
 
-      <div class="modal__inner">
-        <h3 class="modal__title">水を一口</h3>
+        <div class="modal__inner">
+          <h3 class="modal__title">水を一口</h3>
 
-        <p class="modal__text">
-          あなたはいくつ<br />
-          氷を入れますか。<br />
-          冷たい水が喉を通る感覚を<br />感じてみませんか。
-        </p>
+          <p class="modal__text">
+            あなたはいくつ<br />
+            氷を入れますか。<br />
+            冷たい水が喉を通る感覚を<br />感じてみませんか。
+          </p>
 
-        <label class="modal-switch">
-          <input type="checkbox" id="darkSwitch" />
-          <span class="modal-switch__slider"></span>
-        </label>
+          <div class="modal-button">
+            <p class="modal-button__text">やってみる</p>
+
+            <label class="modal-switch">
+              <input type="checkbox" id="darkSwitch" />
+              <span class="modal-switch__slider"></span>
+            </label>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <body>
     <main class="page">
       <section class="hero">
         <!-- heroの雲 -->
@@ -290,39 +294,37 @@
       <footer class="footer">
         <p>©2026 pokke</p>
       </footer>
-
-      <!-- カーテン -->
-      <div class="curtain">
-        <!-- opened -->
-        <img
-          src="assets/curtain_left1_opened.svg"
-          class="curtain-open curtain__left"
-        />
-
-        <img
-          src="assets/curtain_right1_opened.svg"
-          class="curtain-open curtain__right"
-        />
-
-        <!-- closing -->
-        <img
-          src="assets/curtain_left1_closing.svg"
-          class="curtain-closing curtain__left"
-        />
-
-        <img
-          src="assets/curtain_right1_closing.svg"
-          class="curtain-closing curtain__right"
-        />
-
-        <!-- closed -->
-        <img
-          src="assets/curtain3_closed.svg"
-          class="curtain-closed curtain__closed"
-        />
-      </div>
     </main>
+    <!-- カーテン -->
+    <div class="curtain">
+      <!-- opened -->
+      <img
+        src="assets/curtain_left1_opened.svg"
+        class="curtain-open curtain__left"
+      />
 
+      <img
+        src="assets/curtain_right1_opened.svg"
+        class="curtain-open curtain__right"
+      />
+
+      <!-- closing -->
+      <img
+        src="assets/curtain_left2_closing.svg"
+        class="curtain-closing curtain__closing-left"
+      />
+
+      <img
+        src="assets/curtain_right2_closing.svg"
+        class="curtain-closing curtain__closing-right"
+      />
+
+      <!-- closed -->
+      <img
+        src="assets/curtain3_closed.svg"
+        class="curtain-closed curtain__closed"
+      />
+    </div>
     <!-- 暗転レイヤー -->
     <div class="screen-dark"></div>
   </body>

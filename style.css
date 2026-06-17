@@ -115,6 +115,28 @@ body {
   letter-spacing: 0.04em;
 }
 
+/* =========================
+   MODAL BUTTON
+========================= */
+
+.modal-button {
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-button__text {
+  color: #fff;
+
+  font-size: 0.875rem;
+
+  margin-bottom: 16px;
+
+  letter-spacing: 0.04em;
+}
+
 .modal__close {
   position: absolute;
 
@@ -144,7 +166,7 @@ body {
   width: 96px;
   height: 52px;
 
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 .modal-switch input {
@@ -192,17 +214,23 @@ body {
    DARK MODE
 ========================= */
 
-body.is-dark::after {
+body::after {
   content: "";
 
   position: fixed;
   inset: 0;
 
   background: rgba(0, 0, 0, 1);
+  opacity: 0;
+  transition: opacity 3s ease;
 
   z-index: 9998;
 
   pointer-events: none;
+}
+
+body.is-dark::after {
+  opacity: 1;
 }
 
 /* =========================
@@ -735,8 +763,16 @@ body.is-dark::after {
 ========================= */
 
 .curtain {
-  position: absolute;
-  inset: 0;
+  position: fixed;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 393px;
+  height: 100vh;
 
   z-index: 5000;
 
@@ -765,51 +801,66 @@ body.is-dark::after {
 
 .curtain__left,
 .curtain__right,
+.curtain__closing-left,
+.curtain__closing-right {
+  width: 55%;
+  height: 100%;
+
+  object-fit: contain;
+  position: absolute;
+}
 .curtain__closed {
   position: absolute;
 
   top: 0;
 
+  display: block;
+
+  height: 100%;
+
   object-fit: cover;
 }
 
 /* 左カーテン */
-
 .curtain__left {
-  left: -8%;
+  left: -15%;
 
-  width: 58%;
+  border: 2px solid red;
 }
 
 /* 右カーテン */
 
 .curtain__right {
-  right: -8%;
+  right: -15%;
 
-  width: 58%;
+  border: 2px solid red;
 }
 
 /* 閉じかけ左カーテン */
 .curtain__closing-left {
-  left: -8%;
+  left: -10%;
 
-  width: 58%;
+  border: 2px solid red;
 }
 
 /* 閉じかけ右カーテン */
 .curtain__closing-right {
-  right: -8%;
+  right: -10%;
 
-  width: 58%;
+  border: 2px solid red;
 }
 
 /* 閉じたカーテン */
-
 .curtain__closed {
-  inset: 0;
+  position: absolute;
+
+  top: 0;
+  left: 0;
 
   width: 100%;
   height: 100%;
+
+  object-fit: cover;
 }
 /* =========================
    SLEEP EFFECT
@@ -825,11 +876,7 @@ body.is-dark::after {
 /* 眠り演出 */
 
 .page.is-sleeping {
-  filter: blur(4px);
-
-  transform: scale(0.96);
-
-  opacity: 0.7;
+  filter: blur(0.6px);
 }
 
 /* =========================
