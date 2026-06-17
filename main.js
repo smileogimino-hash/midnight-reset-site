@@ -88,6 +88,8 @@ function startCurtainSequence() {
     screenDark.classList.add("is-active");
   }, 2000);
 
+  page.classList.add("is-sleeping");
+
   /* さらに2秒後 */
   setTimeout(() => {
     curtainClosing.forEach((img) => {
@@ -95,8 +97,14 @@ function startCurtainSequence() {
     });
 
     curtainClosed.classList.add("is-show");
-  }, 4000);
+  }, 2600);
 }
+
+/* =========================
+   ぼかし開始(意識が遠のく感じ)
+========================= */
+const page = document.querySelector(".page");
+page.classList.add("is-sleeping");
 
 /* =========================
    message監視

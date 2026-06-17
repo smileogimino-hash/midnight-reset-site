@@ -196,7 +196,7 @@ body.is-dark::after {
   position: fixed;
   inset: 0;
 
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 1);
 
   z-index: 9998;
 
@@ -713,7 +713,7 @@ body.is-dark::after {
 
   inset: 0;
 
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 1);
 
   opacity: 0;
   pointer-events: none;
@@ -788,6 +788,27 @@ body.is-dark::after {
   height: 100%;
 
   object-fit: cover;
+}
+
+/* =========================
+   SLEEP EFFECT
+========================= */
+
+.page {
+  transition:
+    filter 3s ease,
+    transform 3s ease,
+    opacity 3s ease;
+}
+
+/* 眠り演出 */
+
+.page.is-sleeping {
+  filter: blur(4px);
+
+  transform: scale(0.96);
+
+  opacity: 0.7;
 }
 
 /* =========================
