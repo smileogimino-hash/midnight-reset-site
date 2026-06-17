@@ -736,46 +736,24 @@ body.is-dark::after {
   position: fixed;
   inset: 0;
 
-  z-index: 2000;
+  z-index: 5000;
 
   pointer-events: none;
-
-  opacity: 0;
-
-  transition: opacity 1s ease;
 }
 
-/* 表示状態 */
+.curtain-open,
+.curtain-closing,
+.curtain-closed {
+  opacity: 0;
 
-.curtain.is-active {
+  transition: opacity 0.8s ease;
+}
+
+.curtain-open.is-show,
+.curtain-closing.is-show,
+.curtain-closed.is-show {
   opacity: 1;
 }
-
-.curtain__left,
-.curtain__right,
-.curtain__closed {
-  position: absolute;
-  top: 0;
-
-  height: 100%;
-}
-
-.curtain__left {
-  left: -5%;
-  width: 55%;
-}
-
-.curtain__right {
-  right: -5%;
-  width: 55%;
-}
-
-.curtain__closed {
-  inset: 0;
-  width: 100%;
-  opacity: 0;
-}
-
 /* =========================
    SLEEP EFFECT
 ========================= */

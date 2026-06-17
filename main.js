@@ -39,14 +39,6 @@ darkSwitch.addEventListener("change", () => {
   }
 });
 
-toggle.addEventListener("change", () => {
-  if (toggle.checked) {
-    screenDark.classList.add("is-active");
-  } else {
-    screenDark.classList.remove("is-active");
-  }
-});
-
 /* =========================
    カーテン
 ========================= */
@@ -68,6 +60,12 @@ function startCurtainSequence() {
   if (hasStartedCurtain) return;
 
   hasStartedCurtain = true;
+
+  page.classList.add("is-sleeping");
+
+  curtainOpen.forEach((img) => {
+    img.classList.add("is-show");
+  });
 
   /* opened表示 */
   curtainOpen.forEach((img) => {
@@ -122,9 +120,3 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(message);
-
-const curtain = document.querySelector(".curtain");
-
-setTimeout(() => {
-  curtain.classList.add("is-active");
-}, 2000);
