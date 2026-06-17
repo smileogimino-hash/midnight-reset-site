@@ -61,7 +61,7 @@ function startCurtainSequence() {
 
   hasStartedCurtain = true;
 
-  page.classList.add("is-sleeping");
+  // page.classList.add("is-sleeping");
 
   curtainOpen.forEach((img) => {
     img.classList.add("is-show");
@@ -86,8 +86,6 @@ function startCurtainSequence() {
     screenDark.classList.add("is-active");
   }, 2000);
 
-  page.classList.add("is-sleeping");
-
   /* さらに2秒後 */
   setTimeout(() => {
     curtainClosing.forEach((img) => {
@@ -102,7 +100,7 @@ function startCurtainSequence() {
    ぼかし開始(意識が遠のく感じ)
 ========================= */
 const page = document.querySelector(".page");
-page.classList.add("is-sleeping");
+
 
 /* =========================
    message監視
