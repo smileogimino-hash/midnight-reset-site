@@ -55,24 +55,26 @@ let hasStartedCurtain = false;
 /* =========================
    カーテン開始
 ========================= */
-
 function startCurtainSequence() {
   if (hasStartedCurtain) return;
 
   hasStartedCurtain = true;
 
-  // page.classList.add("is-sleeping");
+  /* 眠り演出 */
+  page.classList.add("is-sleeping");
+
+  /* =========================
+     ① opened表示
+  ========================= */
 
   curtainOpen.forEach((img) => {
     img.classList.add("is-show");
   });
 
-  /* opened表示 */
-  curtainOpen.forEach((img) => {
-    img.classList.add("is-show");
-  });
+  /* =========================
+     ② 1秒後 closingへ
+  ========================= */
 
-  /* 2秒後 */
   setTimeout(() => {
     curtainOpen.forEach((img) => {
       img.classList.remove("is-show");
@@ -81,26 +83,33 @@ function startCurtainSequence() {
     curtainClosing.forEach((img) => {
       img.classList.add("is-show");
     });
+  }, 1000);
 
-    /* 暗転開始 */
-    screenDark.classList.add("is-active");
-  }, 2000);
+  /* =========================
+     ③ さらに1秒後 closedへ
+  ========================= */
 
-  /* さらに2秒後 */
   setTimeout(() => {
     curtainClosing.forEach((img) => {
       img.classList.remove("is-show");
     });
 
     curtainClosed.classList.add("is-show");
-  }, 2600);
+  }, 2000);
+
+  /* =========================
+     ④ さらに1秒後closed後に暗転
+  ========================= */
+
+  setTimeout(() => {
+    screenDark.classList.add("is-active");
+  }, 3000);
 }
 
 /* =========================
    ぼかし開始(意識が遠のく感じ)
 ========================= */
 const page = document.querySelector(".page");
-
 
 /* =========================
    message監視

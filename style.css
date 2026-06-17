@@ -718,7 +718,7 @@ body.is-dark::after {
   opacity: 0;
   pointer-events: none;
 
-  transition: opacity 1s ease;
+  transition: opacity 3s ease;
 
   z-index: 9998;
 }
@@ -753,6 +753,61 @@ body.is-dark::after {
 .curtain-closing.is-show,
 .curtain-closed.is-show {
   opacity: 1;
+}
+
+/* =========================
+   CURTAIN IMAGE
+========================= */
+
+.curtain__left,
+.curtain__right,
+.curtain__closed {
+  position: absolute;
+
+  top: 0;
+
+  height: 100vh;
+
+  object-fit: cover;
+}
+
+/* 左カーテン */
+
+.curtain__left {
+  left: -8%;
+
+  width: 58%;
+}
+
+/* 右カーテン */
+
+.curtain__right {
+  right: -8%;
+
+  width: 58%;
+}
+
+/* 閉じかけ左カーテン */
+.curtain__closing-left {
+  left: -8%;
+
+  width: 58%;
+}
+
+/* 閉じかけ右カーテン */
+.curtain__closing-right {
+  right: -8%;
+
+  width: 58%;
+}
+
+/* 閉じたカーテン */
+
+.curtain__closed {
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
 }
 /* =========================
    SLEEP EFFECT
