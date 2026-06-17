@@ -66,10 +66,6 @@ body {
 .modal__overlay {
   position: absolute;
   inset: 0;
-
-  background: rgba(18, 34, 60, 0.72);
-
-  backdrop-filter: blur(6px);
 }
 
 .modal__content {
@@ -79,9 +75,7 @@ body {
   max-width: 320px;
   min-height: 420px;
 
-  background: #394c6ba6;
-
-  backdrop-filter: blur(12px);
+  background: #1c293da6;
 
   z-index: 2;
 
@@ -91,7 +85,9 @@ body {
 
   padding: 40px 32px;
 
-  border-radius: 24px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(1px);
 }
 
 .modal__inner {
@@ -101,7 +97,8 @@ body {
 .modal__title {
   color: #fff;
 
-  font-size: 2rem;
+  text-align: center;
+  font-size: 1.25rem;
   font-weight: 400;
 
   margin-bottom: 32px;
@@ -109,9 +106,11 @@ body {
 
 .modal__text {
   color: #fff;
+  text-align: center;
 
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 2;
+  letter-spacing: 0.04em;
 }
 
 .modal__close {
@@ -477,10 +476,10 @@ body.is-dark::after {
 .answer-block__decoration {
   position: absolute;
 
-  top: 190px;
+  top: 175px;
   left: -10%;
 
-  width: 120%;
+  width: 115%;
   height: auto;
 
   z-index: 1;
@@ -719,7 +718,7 @@ body.is-dark::after {
   opacity: 0;
   pointer-events: none;
 
-  transition: opacity 1.2s ease;
+  transition: opacity 1s ease;
 
   z-index: 9998;
 }
@@ -727,6 +726,68 @@ body.is-dark::after {
 /* 暗転ON */
 .screen-dark.is-active {
   opacity: 1;
+}
+
+/* =========================
+   CURTAIN
+========================= */
+
+.curtain {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  pointer-events: none;
+}
+
+/* 共通 */
+
+.curtain img {
+  position: absolute;
+
+  opacity: 0;
+
+  transition: opacity 0.8s ease;
+}
+
+/* 表示中 */
+
+.curtain img.is-show {
+  opacity: 1;
+}
+
+/* opened */
+
+.curtain__left,
+.curtain__right {
+  top: 0;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* 少しはみ出させる */
+
+.curtain__left {
+  left: -12px;
+}
+
+.curtain__right {
+  right: -12px;
+}
+
+/* closed */
+
+.curtain-closed {
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 }
 
 /* =========================
