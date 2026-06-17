@@ -122,3 +122,9 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(message);
+
+const curtain = document.querySelector(".curtain");
+
+setTimeout(() => {
+  curtain.classList.add("is-active");
+}, 2000);

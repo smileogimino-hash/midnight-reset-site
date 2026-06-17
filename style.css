@@ -55,7 +55,7 @@ body {
 
   transition: 0.4s;
 
-  z-index: 9999;
+  z-index: 5000;
 }
 
 .modal.is-open {
@@ -734,60 +734,46 @@ body.is-dark::after {
 
 .curtain {
   position: fixed;
-
   inset: 0;
 
-  z-index: 9999;
+  z-index: 2000;
 
   pointer-events: none;
-}
-
-/* 共通 */
-
-.curtain img {
-  position: absolute;
 
   opacity: 0;
 
-  transition: opacity 0.8s ease;
+  transition: opacity 1s ease;
 }
 
-/* 表示中 */
+/* 表示状態 */
 
-.curtain img.is-show {
+.curtain.is-active {
   opacity: 1;
 }
 
-/* opened */
-
 .curtain__left,
-.curtain__right {
+.curtain__right,
+.curtain__closed {
+  position: absolute;
   top: 0;
 
   height: 100%;
-
-  object-fit: cover;
 }
 
-/* 少しはみ出させる */
-
 .curtain__left {
-  left: -12px;
+  left: -5%;
+  width: 55%;
 }
 
 .curtain__right {
-  right: -12px;
+  right: -5%;
+  width: 55%;
 }
 
-/* closed */
-
-.curtain-closed {
+.curtain__closed {
   inset: 0;
-
   width: 100%;
-  height: 100%;
-
-  object-fit: cover;
+  opacity: 0;
 }
 
 /* =========================
