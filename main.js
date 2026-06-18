@@ -6,6 +6,25 @@ const suggestionButtons = document.querySelectorAll(".suggestion-btn");
 const darkSwitch = document.getElementById("darkSwitch");
 
 /* =========================
+   question → answerへスクロール
+========================= */
+
+const optionButtons = document.querySelectorAll(".button-option");
+
+optionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetClass = button.dataset.target;
+
+    const targetElement = document.querySelector(`.${targetClass}`);
+
+    targetElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+});
+
+/* =========================
    モーダル開く
 ========================= */
 
