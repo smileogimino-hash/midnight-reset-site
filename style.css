@@ -808,6 +808,7 @@ body.is-dark::after {
 
   object-fit: contain;
   position: absolute;
+  transition: opacity 1.2s ease;
 }
 .curtain__closed {
   position: absolute;
@@ -824,30 +825,23 @@ body.is-dark::after {
 /* 左カーテン */
 .curtain__left {
   left: -15%;
-
-  border: 2px solid red;
 }
 
 /* 右カーテン */
 
 .curtain__right {
   right: -15%;
-
-  border: 2px solid red;
 }
 
 /* 閉じかけ左カーテン */
 .curtain__closing-left {
   left: -10%;
-
-  border: 2px solid red;
 }
 
 /* 閉じかけ右カーテン */
 .curtain__closing-right {
   right: -10%;
 
-  border: 2px solid red;
 }
 
 /* 閉じたカーテン */
