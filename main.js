@@ -102,7 +102,7 @@ function startCurtainSequence() {
     curtainClosing.forEach((img) => {
       img.classList.add("is-show");
     });
-  }, 1000);
+  }, 3000);
 
   /* =========================
      ③ さらに1秒後 closedへ
@@ -114,7 +114,7 @@ function startCurtainSequence() {
     });
 
     curtainClosed.classList.add("is-show");
-  }, 2000);
+  }, 4000);
 
   /* =========================
      ④ さらに1秒後closed後に暗転
@@ -122,7 +122,7 @@ function startCurtainSequence() {
 
   setTimeout(() => {
     screenDark.classList.add("is-active");
-  }, 3000);
+  }, 5000);
 }
 
 /* =========================
