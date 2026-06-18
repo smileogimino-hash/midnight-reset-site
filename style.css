@@ -824,24 +824,23 @@ body.is-dark::after {
 
 /* 左カーテン */
 .curtain__left {
-  left: -15%;
+  left: -18%;
 }
 
 /* 右カーテン */
 
 .curtain__right {
-  right: -15%;
+  right: -18%;
 }
 
 /* 閉じかけ左カーテン */
 .curtain__closing-left {
-  left: -10%;
+  left: -12%;
 }
 
 /* 閉じかけ右カーテン */
 .curtain__closing-right {
-  right: -10%;
-
+  right: -12%;
 }
 
 /* 閉じたカーテン */
@@ -851,8 +850,8 @@ body.is-dark::after {
   top: 0;
   left: 0;
 
-  width: 100%;
-  height: 100%;
+  width: 105%;
+  height: 105%;
 
   object-fit: cover;
 }
