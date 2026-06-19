@@ -352,7 +352,7 @@ body.is-dark::after {
 
 .question__cloud03 {
   top: 250px;
-  right: -140px;
+  right: -35%;
 
   animation: cloudFloatLeft 20s ease-in-out infinite;
 }
