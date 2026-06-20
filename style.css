@@ -6,7 +6,7 @@
   position: relative;
 
   width: 100%;
-  max-width: 393px;
+  max-width: 430px;
   min-height: 100vh;
 
   margin: 0 auto;
@@ -19,9 +19,19 @@
 }
 
 body {
+  overflow-x: clip;
   min-height: 100vh;
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 400;
+
+  background: linear-gradient(
+    180deg,
+    #5c7fb9 0%,
+    #466393 20%,
+    #314870 40%,
+    #223657 65%,
+    #12223c 100%
+  );
 }
 
 .hero,
@@ -98,7 +108,7 @@ body {
 }
 
 .modal__title {
-  color: #fff;
+  color: #dfdede;
 
   text-align: center;
   font-size: 1.25rem;
@@ -265,7 +275,7 @@ body.is-dark::after {
 }
 
 .hero__character--bottom {
-  bottom: 10px;
+  top: 47%;
   left: 55%;
   transform: translateX(-50%) rotate(180deg);
 
@@ -291,13 +301,13 @@ body.is-dark::after {
 .hero__message p {
   text-align: left;
 
-  color: #fff;
+  color: #ffffff;
 
-  font-size: 1.07rem;
+  font-size: clamp(0.85rem, 0.93rem + 0.15vw, 1.07rem);
   line-height: 1.6;
   font-weight: 400;
 
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 /* =========================
@@ -318,15 +328,15 @@ body.is-dark::after {
 /* heroの雲01 */
 
 .hero__cloud01 {
-  top: 171px;
-  right: -120px;
+  top: 25%;
+  right: -30%;
 
   animation: cloudFloatLeft 18s ease-in-out infinite;
 }
 
 .hero__cloud02 {
-  top: 480px;
-  left: -180px;
+  top: 50%;
+  left: -45%;
 
   animation: cloudFloatRight 22s ease-in-out infinite;
 }
@@ -334,7 +344,7 @@ body.is-dark::after {
 
 .question__cloud02 {
   top: 100px;
-  left: -230px;
+  left: -58%;
 
   animation: cloudFloatRight 22s ease-in-out infinite;
 }
@@ -342,8 +352,8 @@ body.is-dark::after {
 /* heroの雲03 */
 
 .hero__cloud03 {
-  top: 700px;
-  right: -37px;
+  top: 75%;
+  right: -18%;
 
   animation: cloudFloatLeft 20s ease-in-out infinite;
 }
