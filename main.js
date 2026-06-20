@@ -2,6 +2,8 @@ const modal = document.getElementById("modal");
 const modalClose = document.getElementById("modalClose");
 
 const suggestionButtons = document.querySelectorAll(".suggestion-btn");
+const modalTitle = document.getElementById("modalTitle");
+const modalText = document.getElementById("modalText");
 
 const darkSwitch = document.getElementById("darkSwitch");
 
@@ -30,6 +32,12 @@ optionButtons.forEach((button) => {
 
 suggestionButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    const title = button.dataset.title;
+    const text = button.dataset.text;
+
+    modalTitle.innerHTML = title;
+    modalText.innerHTML = text;
+
     modal.classList.add("is-open");
   });
 });
