@@ -23,9 +23,9 @@
         </button>
 
         <div class="modal__inner">
-          <h3 class="modal__title">水を一口</h3>
+          <h3 class="modal__title" id="modalTitle">水を一口</h3>
 
-          <p class="modal__text">
+          <p class="modal__text" id="modalText">
             あなたはいくつ<br />
             氷を入れますか。<br />
             冷たい水が喉を通る感覚を<br />感じてみませんか。
@@ -150,22 +150,50 @@
               <div class="suggestion-scroll">
                 <ul class="suggestion-list">
                   <li>
-                    <button class="suggestion-btn">水を一口</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="水を一口"
+                      data-text="あなたはいくつ<br>氷を入れますか。<br>冷たい水が喉を通る感覚を<br>感じてみませんか。"
+                    >
+                      水を一口
+                    </button>
                   </li>
                   <li>
-                    <button class="suggestion-btn">天井を見る</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="天井を見る"
+                      data-text="今いる場所の天井は、<br>どんな模様をしていますか。<br>視線を少し遠くへ持っていってみてください。"
+                    >
+                      >天井を見る
+                    </button>
                   </li>
 
                   <li>
-                    <button class="suggestion-btn">深呼吸する</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="深呼吸をひとつ"
+                      data-text="鼻から吸う空気は、<br>少し冷たいでしょうか。<br>ゆっくり一呼吸してみてください。"
+                    >
+                      深呼吸する
+                    </button>
                   </li>
 
                   <li>
-                    <button class="suggestion-btn">音をひとつ探す</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="音をひとつ探す"
+                      data-text="今、どんな音が聞こえていますか。<br>エアコンの音かもしれませんし、<br>遠くを走る車かもしれません。"
+                    >
+                      >音をひとつ探す
+                    </button>
                   </li>
 
                   <li>
-                    <button class="suggestion-btn">
+                    <button
+                      class="suggestion-btn"
+                      data-title="スマホを持ち替える"
+                      data-text="いつもどちらの手でスマホを持っていますか。<br>反対の手で持った時、どんな感覚ですか。"
+                    >
                       スマホを<br />持ち変える
                     </button>
                   </li>
@@ -205,22 +233,50 @@
               <div class="suggestion-scroll">
                 <ul class="suggestion-list">
                   <li>
-                    <button class="suggestion-btn">肩を一回回す</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="肩を一回回す"
+                      data-text="左右の肩は、同じ重さでしょうか。一度だけ、ゆっくり回してみましょう"
+                    >
+                      肩を一回回す
+                    </button>
                   </li>
                   <li>
-                    <button class="suggestion-btn">手をグーパー</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="手をグーパー"
+                      data-text="手のひらは、思っていたより温かいですか。それとも冷たいですか。ぎゅっと握って、ふっと開いてみましょう。"
+                    >
+                      手をグーパー
+                    </button>
                   </li>
 
                   <li>
-                    <button class="suggestion-btn">足の指を動かす</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="足の指を動かす"
+                      data-text="靴下の感触はありますか。足先だけ、少し動かしてみましょう。"
+                    >
+                      足の指を動かす
+                    </button>
                   </li>
 
                   <li>
-                    <button class="suggestion-btn">背伸びをする</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="背伸びをする"
+                      data-text="どこが一番伸びていますか。気持ちよければ、そのまま5秒キープしてみましょう。"
+                    >
+                      背伸びをする
+                    </button>
                   </li>
 
                   <li>
-                    <button class="suggestion-btn">
+                    <button
+                      class="suggestion-btn"
+                      data-title="一度だけ立ち上がる"
+                      data-text="立ったとき、視線の高さはどれくらい変わりますか。座る前に、見てみてください。"
+                    >
                       一度だけ<br />立ち上がる
                     </button>
                   </li>
@@ -257,22 +313,59 @@
               <div class="suggestion-scroll">
                 <ul class="suggestion-list">
                   <li>
-                    <button class="suggestion-btn">歯ブラシを探す</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="歯ブラシを探す"
+                      data-text="今いる場所から、歯ブラシはどのあたりにあるでしょう。
+                      壁をすり抜けるようなイメージで、思い浮かべてみてください。"
+                    >
+                      歯ブラシを探す
+                    </button>
                   </li>
                   <li>
-                    <button class="suggestion-btn">水を一口</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="水を一口"
+                      data-text="あなたは水にいくつ氷を入れますか。
+                      冷たい水が喉を通る感覚を感じてみませんか。"
+                    >
+                      水を一口
+                    </button>
                   </li>
 
                   <li>
-                    <button class="suggestion-btn">立ち上がる</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="立ち上がる"
+                      data-text="立ち上がったとき、
+                      今見えていないものがひとつ増えるとしたら何でしょう。"
+                    >
+                      立ち上がる
+                    </button>
                   </li>
 
                   <li>
-                    <button class="suggestion-btn">部屋の明かり</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="部屋の明かり"
+                      data-text="今いる部屋で、いちばん暗い場所はどこでしょう。
+                      反対に、 いちばん明るい場所はどこでしょう。
+                      いつもいる場所も少し違って見えるかもしれません。"
+                    >
+                      部屋の明かり
+                    </button>
                   </li>
 
                   <li>
-                    <button class="suggestion-btn">充電器の場所</button>
+                    <button
+                      class="suggestion-btn"
+                      data-title="充電器の場所"
+                      data-text="寝るとき、スマホはどこに置きますか。
+                      昨日スマホを置いたときの情景を思い出せますか。
+                      今いる場所からスマホを置く場所を想像してみてください。"
+                    >
+                      充電器の場所
+                    </button>
                   </li>
                 </ul>
               </div>
