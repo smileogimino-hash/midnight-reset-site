@@ -600,16 +600,11 @@ body.is-dark::after {
 .suggestion {
   position: absolute;
 
-  left: 0;
-  right: 0;
+  left: var(--side-padding);
+  right: var(--side-padding);
   bottom: 116px;
 
   z-index: 5;
-
-  width: 100%;
-  max-width: 280px;
-
-  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
