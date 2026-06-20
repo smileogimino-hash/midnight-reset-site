@@ -777,7 +777,7 @@ body.is-dark::after {
   transform: translateX(-50%);
 
   width: 100%;
-  max-width: 393px;
+  max-width: 430px;
   height: 100vh;
 
   z-index: 5000;
