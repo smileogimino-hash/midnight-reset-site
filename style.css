@@ -424,7 +424,7 @@ body.is-dark::after {
   border-radius: 18px;
 
   background: #ffffff;
-  color: #333;
+  color: #12223c;
 
   font-size: clamp(0.8rem, 0.85rem + 0.15vw, 0.9rem);
   line-height: 1.5;
