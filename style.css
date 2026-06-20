@@ -275,7 +275,7 @@ body.is-dark::after {
 }
 
 .hero__character--bottom {
-  top: 50%;
+  top: 48%;
   left: 55%;
   transform: translateX(-50%) rotate(180deg);
 
