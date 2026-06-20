@@ -675,15 +675,27 @@ body.is-dark::after {
   overflow-x: auto;
   overflow-y: hidden;
 
-  scrollbar-width: none;
-
   -webkit-overflow-scrolling: touch;
+
+  padding-bottom: 7px;
 }
 
+/* スクロールバー全体 */
 .suggestion-scroll::-webkit-scrollbar {
-  display: none;
+  height: 6px;
 }
 
+/* バー背景 */
+.suggestion-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.061);
+  border-radius: 999px;
+}
+
+/* 動く部分 */
+.suggestion-scroll::-webkit-scrollbar-thumb {
+  background: #455b7fa6;
+  border-radius: 999px;
+}
 /* =========================
    MESSAGE
 ========================= */
