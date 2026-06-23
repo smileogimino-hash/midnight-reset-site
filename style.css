@@ -7,7 +7,7 @@
 
   width: 100%;
   max-width: 430px;
-  min-height: 100vh;
+  min-height: 100dvh;
 
   margin: 0 auto;
 }
@@ -20,7 +20,7 @@
 
 body {
   overflow-x: clip;
-  min-height: 100vh;
+  min-height: 100dvh;
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 400;
 
@@ -250,7 +250,7 @@ body.is-dark::after {
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
 }
 
@@ -761,6 +761,9 @@ body.is-dark::after {
 
   inset: 0;
 
+  width: 100vw;
+  height: 100dvh;
+
   background: rgba(0, 0, 0, 1);
 
   opacity: 0;
@@ -790,7 +793,7 @@ body.is-dark::after {
 
   width: 100%;
   max-width: 430px;
-  height: 100vh;
+  height: 100dvh;
 
   z-index: 5000;
 
