@@ -653,6 +653,7 @@ body.is-dark::after {
   padding: 14px 18px;
 
   border: none;
+  border-radius: 18px;
 
   background: #394c6ba6;
 
