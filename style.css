@@ -7,7 +7,7 @@
 
   width: 100%;
   max-width: 430px;
-  min-height: 100dvh;
+  min-height: 100vh;
 
   margin: 0 auto;
 }
@@ -20,7 +20,7 @@
 
 body {
   overflow-x: clip;
-  min-height: 100dvh;
+  min-height: 100vh;
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 400;
 
@@ -250,7 +250,7 @@ body.is-dark::after {
 
 .hero {
   position: relative;
-  min-height: 100dvh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
